@@ -108,9 +108,31 @@ function sumAll( ) {
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let testArray = [-1,4,3,9,-5,0];
 
+
+function positiveNumbers(array){
+  let positive = [];
+  for (i of array) {
+    if (i > 0) {
+      positive.push(i);
+    }
+  }
+  return positive;
+}
+
+console.log(positiveNumbers(testArray));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+//Write a function that takes an integer 'minutes' and converts it to seconds.
+
+function convert(minutes) {
+  return minutes * 60;
+}
+
+console.log('Testing convert function, 45 minutes is this many seconds');
+console.log(convert(45));
