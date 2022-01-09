@@ -39,12 +39,14 @@ console.log('This is a test of multipling 3 * 4 * 5:', multiplyThree(3,4,5));
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
-function isPositive( number ) {
+function isPositive(number) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+    return false;
 }
+console.log('Is 3 a postivie number?', isPositive(3));
+
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -55,15 +57,31 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  return array[array.length - 1];
 }
+let fruits = [ 'apple', 'banana', 'kiwi'];
+
+console.log(getLast(fruits));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
+  let found=false;
 
+  for (i of array) {
+//    console.log(`In the for loop i is: ${i}`);
+//    console.log(`Value is: ${value}`);
+    if (value === i) {
+//      console.log('Found true')
+      found = true;
+    }
+  }
+  return found;
 }
+
+console.log('Looking if kiwi is in the array.',find('kiwi',fruits));
+console.log('Looking if cherry is in the array.',find('cherry',fruits));
 
 // ----------------------
 // Stretch Goals
